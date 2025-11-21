@@ -1,33 +1,33 @@
 export const categories = [
     {
         id: 'unik-punctures',
-        name: 'UNIK Punctures',
+        name: 'Tube Repair Patch',
         description: 'High-quality puncture repair patches for all tyre types.',
-        image: 'https://placehold.co/600x400/000000/d6b06a?text=UNIK+Punctures'
+        image: '/images/tube-repair-home.jpeg'
     },
     {
         id: 'nylon-tyre-patch',
         name: 'Nylon Tyre Patch',
         description: 'Reinforced nylon patches for heavy-duty durability.',
-        image: 'https://placehold.co/600x400/000000/d6b06a?text=Nylon+Tyre+Patch'
+        image: '/images/tyre-repair-home.jpeg'
     },
     {
         id: 'radial-tyre-patch',
         name: 'Radial Tyre Patch',
         description: 'Specialized patches for radial tyres ensuring flexibility and strength.',
-        image: 'https://placehold.co/600x400/000000/d6b06a?text=Radial+Tyre+Patch'
+        image: '/images/radial-home.jpeg'
     },
     {
         id: 'unik-cvf',
         name: 'UNIK CVF',
         description: 'Chemical Vulcanizing Fluid for superior bonding.',
-        image: 'https://placehold.co/600x400/000000/d6b06a?text=UNIK+CVF'
+        image: '/images/cvf-home.jpeg'
     },
     {
         id: 'tubeless-kits',
         name: 'Tubeless Kits',
         description: 'Complete repair kits for tubeless tyres.',
-        image: 'https://placehold.co/600x400/000000/d6b06a?text=Tubeless+Kits'
+        image: '/images/tubeless-home.jpeg'
     }
 ];
 

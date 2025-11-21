@@ -148,7 +148,7 @@ const ProductDetail = () => {
                                 <MessageSquare size={20} /> Enquire Now
                             </a>
                             <a
-                                href="tel:+919876543210"
+                                href="tel:+919267000050"
                                 className="flex-1 bg-transparent border border-gray-600 text-white py-4 px-8 font-bold uppercase tracking-widest text-center hover:border-unik-gold hover:text-unik-gold transition-all duration-300 flex items-center justify-center gap-2 rounded-lg"
                             >
                                 <Phone size={20} /> Contact Dealer
