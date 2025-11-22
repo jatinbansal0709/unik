@@ -31,7 +31,7 @@ const TyreRepairPage = () => {
                     </h1>
                     <div className="w-24 h-1 bg-unik-red mx-auto mb-8"></div>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Choose the right repair solution for your specific needs.
+                        Experience the pinnacle of tyre repair with our advanced solutions. Crafted using German technology and genuine ply, our patches guarantee safety and longevity for every journey.
                     </p>
                 </div>
 

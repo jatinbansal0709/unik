@@ -4,8 +4,8 @@ import SinglePouchSection from '../components/SinglePouchSection';
 import VideoSection from '../components/VideoSection';
 import ProductShowcase from '../components/ProductShowcase';
 import OurPresence from '../components/OurPresence';
+import PresenceMap from '../components/PresenceMap';
 import Features from '../components/Features';
-import Reviews from '../components/Reviews';
 import ContactForm from '../components/ContactForm';
 import ImageCarousel from '../components/ImageCarousel';
 import ImageMarquee from '../components/ImageMarquee';
@@ -19,9 +19,9 @@ const Home = () => {
             <VideoSection />
             <ProductShowcase />
             <OurPresence />
+            <PresenceMap />
             <ImageMarquee />
             <Features />
-            <Reviews />
             <ContactForm />
         </div>
     );

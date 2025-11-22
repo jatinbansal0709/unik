@@ -22,7 +22,7 @@ const AllProducts = () => {
                     </h1>
                     <div className="w-24 h-1 bg-unik-red mx-auto mb-8"></div>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Explore our complete range of tyre and tube repair solutions.
+                        Discover our comprehensive range of premium repair solutions. From tube repairs to tubeless kits, every product is a testament to quality, innovation, and reliability.
                     </p>
                 </div>
 

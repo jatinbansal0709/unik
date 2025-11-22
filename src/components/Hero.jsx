@@ -1,6 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+
+const TypewriterText = ({ text }) => {
+    const [displayText, setDisplayText] = useState('');
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [loopNum, setLoopNum] = useState(0);
+    const [typingSpeed, setTypingSpeed] = useState(50);
+
+    useEffect(() => {
+        const handleTyping = () => {
+            const fullText = text;
+
+            setDisplayText(current => {
+                if (isDeleting) {
+                    return fullText.substring(0, current.length - 1);
+                } else {
+                    return fullText.substring(0, current.length + 1);
+                }
+            });
+
+            if (!isDeleting && displayText === fullText) {
+                setTimeout(() => setIsDeleting(true), 2000); // Wait before deleting
+                setTypingSpeed(30); // Deleting speed
+            } else if (isDeleting && displayText === '') {
+                setIsDeleting(false);
+                setLoopNum(loopNum + 1);
+                setTypingSpeed(50); // Typing speed
+            }
+        };
+
+        const timer = setTimeout(handleTyping, typingSpeed);
+        return () => clearTimeout(timer);
+    }, [displayText, isDeleting, loopNum, typingSpeed, text]);
+
+    return (
+        <span className="inline-block min-h-[3.5rem]">
+            {displayText}
+            <span className="animate-pulse text-unik-gold">|</span>
+        </span>
+    );
+};
 
 const Hero = () => {
     const scrollToProducts = () => {
@@ -58,8 +98,8 @@ const Hero = () => {
                         UNIK <span className="text-unik-red">TYRE</span><br />
                         REPAIR <span className="text-unik-gold">PRODUCTS</span>
                     </h1>
-                    <p className="text-gray-400 text-lg md:text-xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                        Engineered for safety and durability. The trusted choice for professional tyre repair solutions since 1990.
+                    <p className="text-gray-400 text-lg md:text-xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed h-24 md:h-auto">
+                        <TypewriterText text="Engineered for safety and durability. The trusted choice for professional tyre repair solutions since 1990." />
                     </p>
 
                     <motion.button
