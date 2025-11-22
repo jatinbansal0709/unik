@@ -142,7 +142,9 @@ const ProductDetail = () => {
                         {/* Actions */}
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a
-                                href="#contact"
+                                href="https://wa.me/919267000050"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex-1 bg-unik-red text-white py-4 px-8 font-bold uppercase tracking-widest text-center hover:bg-white hover:text-unik-red transition-all duration-300 shadow-[0_0_20px_rgba(211,47,47,0.3)] flex items-center justify-center gap-2 rounded-lg"
                             >
                                 <MessageSquare size={20} /> Enquire Now

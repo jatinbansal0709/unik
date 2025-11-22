@@ -5,6 +5,12 @@ import { motion } from 'framer-motion';
 const Reviews = () => {
     const reviews = [
         {
+            name: "Parveen Kumar Bansal",
+            role: "Haryana Distributor",
+            text: "With over 20 years of experience in this field, I can vouch for UNIK's superior quality. Their products have consistently set the benchmark for durability and performance in the market.",
+            rating: 5
+        },
+        {
             name: "Rajesh Kumar",
             role: "Distributor, Delhi",
             text: "UNIK patches have significantly reduced our return rates. The quality is consistent and the bonding strength is unmatched in the market.",

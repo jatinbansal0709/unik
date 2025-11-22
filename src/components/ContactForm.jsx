@@ -12,6 +12,9 @@ const ContactForm = () => {
                     <h3 className="text-3xl md:text-4xl font-heading font-bold text-white">
                         PARTNER WITH <span className="text-unik-red">US</span>
                     </h3>
+                    <p className="text-gray-400 max-w-2xl mx-auto mt-6">
+                        Join our growing network of satisfied partners. Whether you have a query or need support, our team is here to assist you 24/7.
+                    </p>
                 </div>
 
                 <div className="max-w-6xl mx-auto bg-unik-black shadow-2xl border border-gray-800 relative overflow-hidden rounded-2xl">

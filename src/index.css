@@ -35,6 +35,22 @@
   .box-glow {
     box-shadow: 0 0 20px rgba(211, 47, 47, 0.3);
   }
+
+  .bg-tyre-tread {
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+      linear-gradient(225deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+      linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+      linear-gradient(315deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+  }
+
+  .inner-shadow {
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: inherit;
+    pointer-events: none;
+  }
 }
 
 /* Smooth scrolling for the whole document */

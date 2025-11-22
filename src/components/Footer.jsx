@@ -3,8 +3,10 @@ import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from 'lucide-react
 
 const Footer = () => {
     return (
-        <footer className="bg-unik-dark-grey text-white pt-16 pb-8 border-t border-unik-grey">
-            <div className="container mx-auto px-6">
+        <footer className="bg-unik-dark-grey text-white pt-16 pb-8 border-t border-unik-grey relative overflow-hidden">
+            {/* Tyre Tread Pattern Overlay */}
+            <div className="absolute inset-0 opacity-10 bg-tyre-tread pointer-events-none"></div>
+            <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     {/* Brand Info */}
                     <div>
@@ -14,6 +16,9 @@ const Footer = () => {
                                 TYRE & TUBE REPAIR
                             </span>
                         </div>
+                        <p className="text-gray-400 mb-2 font-bold text-unik-gold">
+                            UNITECH RUBBER INDUSTRIES
+                        </p>
                         <p className="text-gray-400 mb-6 leading-relaxed">
                             Premium tyre repair solutions engineered for durability and safety.
                             Proudly made in India, trusted globally.

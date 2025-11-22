@@ -58,12 +58,17 @@ const OurPresence = () => {
     ];
 
     return (
-        <section className="py-20 bg-unik-black border-t border-gray-900">
-            <div className="container mx-auto px-6">
+        <section className="py-20 bg-unik-black border-t border-gray-900 relative overflow-hidden">
+            {/* Tyre Tread Pattern Overlay */}
+            <div className="absolute inset-0 opacity-10 bg-tyre-tread pointer-events-none"></div>
+            <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
                         Our Presence
                     </h2>
+                    <p className="text-gray-400 max-w-2xl mx-auto mb-6">
+                        With a legacy spanning over three decades, we have established a strong footprint across India and beyond, serving thousands of satisfied customers.
+                    </p>
                     <div className="w-24 h-1 bg-unik-red mx-auto"></div>
                 </div>
 

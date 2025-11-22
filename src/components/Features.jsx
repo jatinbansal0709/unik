@@ -24,7 +24,21 @@ const Features = () => {
 
     return (
         <section id="features" className="py-24 bg-unik-dark-grey relative overflow-hidden">
-            <div className="container mx-auto px-6">
+            {/* Tyre Tread Pattern Overlay */}
+            <div className="absolute inset-0 opacity-10 bg-tyre-tread pointer-events-none"></div>
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="text-center mb-16">
+                    <h2 className="text-unik-gold font-bold tracking-widest uppercase mb-2 text-sm">
+                        Why Choose Us
+                    </h2>
+                    <h3 className="text-3xl md:text-5xl font-heading font-bold text-white mb-6">
+                        UNIK <span className="text-unik-red">ADVANTAGE</span>
+                    </h3>
+                    <p className="text-gray-400 max-w-2xl mx-auto">
+                        We combine German engineering with high-quality materials to deliver tyre repair solutions that stand the test of time. Trust the experts for safety and performance.
+                    </p>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {features.map((feature, index) => (
                         <div key={index} className="h-full">

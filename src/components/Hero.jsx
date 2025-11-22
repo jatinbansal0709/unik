@@ -55,10 +55,10 @@ const Hero = () => {
             {/* Background with Glowing Dots Pattern */}
             <div className="absolute inset-0 z-0 bg-unik-black">
                 {/* Dot Pattern */}
-                <div className="absolute inset-0 opacity-20"
+                <div className="absolute inset-0 opacity-40"
                     style={{
-                        backgroundImage: 'radial-gradient(#666 1px, transparent 1px)',
-                        backgroundSize: '24px 24px'
+                        backgroundImage: 'radial-gradient(circle, #d6b06a 1.5px, rgba(214, 176, 106, 0.2) 4px, transparent 5px)',
+                        backgroundSize: '30px 30px'
                     }}
                 ></div>
 

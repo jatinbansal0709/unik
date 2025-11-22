@@ -44,15 +44,17 @@ const CategoryPage = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                             key={product.id}
-                            className="group relative bg-unik-dark-grey border border-gray-800 hover:border-unik-gold/50 transition-all duration-300 rounded-2xl overflow-hidden"
+                            onClick={() => window.location.href = `/product/${product.id}`}
+                            className="group relative bg-black border border-gray-800 hover:border-unik-gold/50 transition-all duration-300 rounded-2xl overflow-hidden cursor-pointer"
                         >
                             {/* Image Container */}
-                            <div className="relative h-48 md:h-64 overflow-hidden bg-white p-4">
+                            <div className="relative h-32 md:h-48 md:h-64 overflow-hidden bg-white p-4">
                                 <img
                                     src={product.images[0]}
                                     alt={product.name}
                                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                                 />
+                                <div className="absolute inset-0 inner-shadow rounded-2xl"></div>
                             </div>
 
                             {/* Content */}

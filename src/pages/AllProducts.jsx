@@ -36,15 +36,15 @@ const AllProducts = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             key={cat.id}
                             onClick={() => navigate(`/category/${cat.id}`)}
-                            className="group relative bg-unik-dark-grey border border-gray-800 hover:border-unik-gold/50 transition-all duration-300 rounded-2xl overflow-hidden cursor-pointer h-full flex flex-col"
+                            className="group relative bg-black border border-gray-800 hover:border-unik-gold/50 transition-all duration-300 rounded-2xl overflow-hidden cursor-pointer h-full flex flex-col"
                         >
-                            <div className="h-48 overflow-hidden bg-gray-900 relative">
+                            <div className="h-40 md:h-48 overflow-hidden bg-black relative">
                                 <img
                                     src={cat.image}
                                     alt={cat.name}
-                                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-unik-black to-transparent opacity-60"></div>
+                                <div className="absolute inset-0 inner-shadow rounded-2xl"></div>
                             </div>
                             <div className="p-6 flex-grow flex flex-col justify-between">
                                 <div>
@@ -82,14 +82,15 @@ const AllProducts = () => {
                                             viewport={{ once: true }}
                                             key={product.id}
                                             onClick={() => navigate(`/product/${product.id}`)}
-                                            className="group bg-unik-dark-grey border border-gray-800 hover:border-unik-gold/30 transition-all duration-300 rounded-xl overflow-hidden cursor-pointer"
+                                            className="group bg-black border border-gray-800 hover:border-unik-gold/30 transition-all duration-300 rounded-xl overflow-hidden cursor-pointer"
                                         >
-                                            <div className="h-40 bg-white p-4 overflow-hidden relative">
+                                            <div className="h-32 md:h-40 bg-white p-4 overflow-hidden relative">
                                                 <img
                                                     src={product.images[0]}
                                                     alt={product.name}
                                                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                                                 />
+                                                <div className="absolute inset-0 inner-shadow rounded-xl"></div>
                                             </div>
                                             <div className="p-4">
                                                 <h4 className="text-white font-bold mb-1 group-hover:text-unik-gold transition-colors truncate">

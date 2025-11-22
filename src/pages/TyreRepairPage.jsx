@@ -45,20 +45,20 @@ const TyreRepairPage = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             key={option.id}
                             onClick={() => navigate(`/category/${option.id}`)}
-                            className="group relative bg-unik-dark-grey border border-gray-800 hover:border-unik-gold/50 transition-all duration-300 rounded-2xl overflow-hidden cursor-pointer h-[400px] flex flex-col"
+                            className="group relative bg-black border border-gray-800 hover:border-unik-gold/50 transition-all duration-300 rounded-2xl overflow-hidden cursor-pointer h-[400px] flex flex-col"
                         >
                             {/* Image Container */}
-                            <div className="relative h-64 overflow-hidden bg-gray-900">
+                            <div className="relative h-40 md:h-64 overflow-hidden bg-black">
                                 <img
                                     src={option.image}
                                     alt={option.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-unik-dark-grey via-transparent to-transparent opacity-90"></div>
+                                <div className="absolute inset-0 inner-shadow rounded-2xl"></div>
                             </div>
 
                             {/* Content */}
-                            <div className="p-8 flex-grow flex flex-col justify-between relative z-10 -mt-12">
+                            <div className="p-8 flex-grow flex flex-col justify-between border-t border-gray-800">
                                 <div>
                                     <h3 className="text-2xl font-heading font-bold text-white mb-3 group-hover:text-unik-gold transition-colors">
                                         {option.title}
