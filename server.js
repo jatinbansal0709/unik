@@ -112,6 +112,20 @@ app.post('/api/upload', upload.fields([{ name: 'images', maxCount: 10 }, { name:
     }
 });
 
+// Serve static files from the React app
+const distPath = path.join(__dirname, 'dist');
+if (fs.existsSync(distPath)) {
+    app.use(express.static(distPath));
+
+    // The "catchall" handler: for any request that doesn't
+    // match one above, send back React's index.html file.
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(distPath, 'index.html'));
+    });
+} else {
+    console.log('Dist folder not found. Running in API-only mode or development.');
+}
+
 app.listen(PORT, () => {
     console.log(`Upload server running on http://localhost:${PORT}`);
 });
