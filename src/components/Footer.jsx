@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
@@ -40,10 +41,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-xl font-heading font-bold mb-6 text-unik-gold">Quick Links</h4>
                         <ul className="space-y-3">
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                            <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">Products</a></li>
-                            <li><a href="#features" className="text-gray-400 hover:text-white transition-colors">Why Choose Us</a></li>
-                            <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact Support</a></li>
+                            <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
+                            <li><Link to="/products" className="text-gray-400 hover:text-white transition-colors">Products</Link></li>
+                            <li><a href="/#features" className="text-gray-400 hover:text-white transition-colors">Why Choose Us</a></li>
+                            <li><a href="/#contact" className="text-gray-400 hover:text-white transition-colors">Contact Support</a></li>
                         </ul>
                     </div>
 
@@ -53,15 +54,15 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-gray-400">
                                 <MapPin className="text-unik-red mt-1 shrink-0" size={20} />
-                                <span>C-27, Industrial Focal Point,<br />Sangrur, India, 148001</span>
+                                <span className="hover:text-white transition-colors cursor-pointer">C-27, Industrial Focal Point,<br />Sangrur, India, 148001</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Phone className="text-unik-red shrink-0" size={20} />
-                                <span>+91 92670 00050</span>
+                                <span className="hover:text-white transition-colors cursor-pointer">+91 92670 00050</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Mail className="text-unik-red shrink-0" size={20} />
-                                <span>okayinternational@yahoo.com</span>
+                                <span className="hover:text-white transition-colors cursor-pointer">okayinternational@yahoo.com</span>
                             </li>
                         </ul>
                     </div>
@@ -69,7 +70,7 @@ const Footer = () => {
 
                 <div className="border-t border-unik-grey pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-sm">
-                        © {new Date().getFullYear()} UNIK Tyre Repair Products. All rights reserved.
+                        © {new Date().getFullYear()} UNITECH RUBBER INDUSTRIES. All rights reserved.
                     </p>
                     <div className="flex items-center gap-2">
                         <span className="text-gray-500 text-sm">Proudly Made in India</span>

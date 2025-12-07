@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Phone, MessageSquare, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { products, categories } from '../data/products';
+import TubeRepairChart from '../components/TubeRepairChart';
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -48,12 +49,36 @@ const ProductDetail = () => {
                         transition={{ duration: 0.6 }}
                         className="space-y-4"
                     >
-                        <div className="aspect-square bg-white border border-gray-800 rounded-lg overflow-hidden relative group p-8">
-                            <img
-                                src={selectedImage}
-                                alt={product.name}
-                                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                            />
+                        <div className="aspect-square bg-white border border-gray-800 rounded-lg overflow-hidden relative group p-8 touch-pan-y">
+                            <AnimatePresence mode="wait">
+                                <motion.img
+                                    key={selectedImage}
+                                    src={selectedImage}
+                                    alt={product.name}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: -20 }}
+                                    transition={{ duration: 0.3 }}
+                                    drag="x"
+                                    dragConstraints={{ left: 0, right: 0 }}
+                                    dragElastic={1}
+                                    onDragEnd={(e, { offset, velocity }) => {
+                                        const swipe = Math.abs(offset.x) * velocity.x;
+                                        if (swipe < -10000) {
+                                            // Swipe Left (Next)
+                                            const currentIndex = product.images.indexOf(selectedImage);
+                                            const nextIndex = currentIndex === product.images.length - 1 ? 0 : currentIndex + 1;
+                                            setSelectedImage(product.images[nextIndex]);
+                                        } else if (swipe > 10000) {
+                                            // Swipe Right (Prev)
+                                            const currentIndex = product.images.indexOf(selectedImage);
+                                            const prevIndex = currentIndex === 0 ? product.images.length - 1 : currentIndex - 1;
+                                            setSelectedImage(product.images[prevIndex]);
+                                        }
+                                    }}
+                                    className="w-full h-full object-contain cursor-grab active:cursor-grabbing"
+                                />
+                            </AnimatePresence>
 
                             {/* Image Slider Controls */}
                             {product.images.length > 1 && (
@@ -65,7 +90,7 @@ const ProductDetail = () => {
                                             const prevIndex = currentIndex === 0 ? product.images.length - 1 : currentIndex - 1;
                                             setSelectedImage(product.images[prevIndex]);
                                         }}
-                                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-unik-red text-white p-2 rounded-full transition-colors opacity-0 group-hover:opacity-100"
+                                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-unik-red text-white p-2 rounded-full transition-colors opacity-0 group-hover:opacity-100 z-10"
                                     >
                                         <ChevronLeft size={24} />
                                     </button>
@@ -76,7 +101,7 @@ const ProductDetail = () => {
                                             const nextIndex = currentIndex === product.images.length - 1 ? 0 : currentIndex + 1;
                                             setSelectedImage(product.images[nextIndex]);
                                         }}
-                                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-unik-red text-white p-2 rounded-full transition-colors opacity-0 group-hover:opacity-100"
+                                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-unik-red text-white p-2 rounded-full transition-colors opacity-0 group-hover:opacity-100 z-10"
                                     >
                                         <ChevronRight size={24} />
                                     </button>
@@ -138,6 +163,9 @@ const ProductDetail = () => {
                                 <div className="text-white font-medium">{product.specs.material}</div>
                             </div>
                         </div>
+
+                        {/* Tube Repair Chart */}
+                        {category?.id === 'unik-punctures' && <TubeRepairChart />}
 
                         {/* Actions */}
                         <div className="flex flex-col sm:flex-row gap-4">

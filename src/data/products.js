@@ -38,7 +38,7 @@ export const products = [
         categoryId: 'unik-punctures',
         name: 'Tiny Round',
         description: 'Small round patch for minor punctures.',
-        specs: { size: 'Small', quantity: 'Box of 100', material: 'Rubber' },
+        specs: { size: '25 mm', quantity: 'Pouch of 100', material: 'Rubber' },
         images: ['/images/tiny-round.jpg']
     },
     {
@@ -46,7 +46,7 @@ export const products = [
         categoryId: 'unik-punctures',
         name: 'Mini Round',
         description: 'Compact round patch for standard punctures.',
-        specs: { size: 'Medium', quantity: 'Box of 50', material: 'Rubber' },
+        specs: { size: '35 mm', quantity: 'Pouch of 50', material: 'Rubber' },
         images: ['/images/mini-round.jpg']
     },
     {
@@ -54,7 +54,7 @@ export const products = [
         categoryId: 'unik-punctures',
         name: 'Small Round',
         description: 'Standard round patch for everyday repairs.',
-        specs: { size: 'Large', quantity: 'Box of 40', material: 'Rubber' },
+        specs: { size: '60 mm', quantity: 'Pouch of 40', material: 'Rubber' },
         images: ['/images/small-round.jpg']
     },
     {
@@ -62,7 +62,7 @@ export const products = [
         categoryId: 'unik-punctures',
         name: 'Small Oval',
         description: 'Oval shaped patch for elongated punctures.',
-        specs: { size: 'Small Oval', quantity: 'Box of 30', material: 'Rubber' },
+        specs: { size: '65 x 40 mm', quantity: 'Pouch of 30', material: 'Rubber' },
         images: ['/images/small-oval.jpg']
     },
     {
@@ -70,7 +70,7 @@ export const products = [
         categoryId: 'unik-punctures',
         name: 'Mini Oval',
         description: 'Compact oval patch for versatile use.',
-        specs: { size: 'Mini Oval', quantity: 'Box of 50', material: 'Rubber' },
+        specs: { size: '40 x 30 mm', quantity: 'Pouch of 50', material: 'Rubber' },
         images: ['/images/mini-oval.jpg']
     },
     {
@@ -78,7 +78,7 @@ export const products = [
         categoryId: 'unik-punctures',
         name: 'Cycle Round',
         description: 'Specialized patch for bicycle tubes.',
-        specs: { size: 'Cycle', quantity: 'Box of 100', material: 'Rubber' },
+        specs: { size: '25 mm', quantity: 'Pouch of 100', material: 'Rubber' },
         images: ['/images/cycle-round.jpg']
     },
 
